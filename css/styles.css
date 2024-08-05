@@ -1,0 +1,34 @@
+@keyframes navbar {
+  from {
+    color: white;
+    text-decoration: none;
+  }
+  to {
+    color: red;
+    text-decoration: overline;
+  }
+}
+body {
+  background-color: white;
+  margin: 0;
+}
+body h1 {
+  text-align: center;
+}
+body .navbar {
+  background-color: black;
+  font-size: xx-large;
+  padding: 25px;
+  text-align: center;
+}
+body .navbar a {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+body .navbar a:hover {
+  animation-name: navbar;
+  animation-duration: 1s;
+}/*# sourceMappingURL=styles.css.map */
