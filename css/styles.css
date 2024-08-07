@@ -3,7 +3,8 @@
   src: url(../Enjoy\ Summer.ttf);
 }
 body {
-  background-color: #F1EEDC;
+  background-image: url(../Cloudy.svg);
+  background-size: cover;
   margin: 0;
   font-family: mainFont;
 }
