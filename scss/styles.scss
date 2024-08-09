@@ -53,8 +53,54 @@ body {
 
     // Styles for the Gallery Page
     //--------------------------------------------------------------------------------------------------------------------
+    .header {
+        width: 50%;
+        margin: auto;
+        border-radius: 25px;
+        background-color: grey;
+        h1 {
+            padding: 5px;
+        }
+    }
 
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        width: 75%;
+        justify-content: center;
+        background-color: grey;
+        border-radius: 25px;
+        padding: 10px 10px;
+    }
 
+    .column {
+        flex: 20%;
+        max-width: 20%;
+        padding: 0px 5px;
+        img {
+            width: 100%;
+            border-radius: 25px;
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        .column {
+        flex: 40%;
+        max-width: 40%;
+        }
+        .gallery {
+            width: 50%;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .column {
+        flex: 100%;
+        max-width: 100%;
+        }
+    }
+    
     // Styles for the Events Page
     //--------------------------------------------------------------------------------------------------------------------
 
