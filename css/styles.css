@@ -6,13 +6,15 @@ body {
   background-image: url(../Cloudy.svg);
   background-size: cover;
   margin: 0;
+  color: #333333;
   font-family: mainFont;
 }
 body h1 {
   text-align: center;
 }
 body .navbar {
-  background-color: #545B77;
+  background-image: url(../Mass\ Circles.svg);
+  background-size: cover;
   font-size: xx-large;
   padding: 25px;
   text-align: center;
@@ -20,7 +22,7 @@ body .navbar {
   margin-bottom: 20px;
 }
 body .navbar a {
-  color: black;
+  color: #333333;
   transition: color 1s;
   text-decoration: none;
   margin-left: 30px;
@@ -28,22 +30,51 @@ body .navbar a {
   text-align: center;
 }
 body .navbar a:hover {
-  color: white;
+  color: #783dc0;
   text-decoration: overline;
 }
-body .help {
+body .hero-image {
+  width: 20%;
+  height: auto;
+  display: block;
   margin: auto;
-  background-color: #B3C8CF;
+}
+body .container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+body .overview {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  width: 50%;
-  padding: 5px;
-  border-radius: 20px;
+}
+body .overview h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+body .overview p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+body footer {
+  background: #4fc3f7;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  position: absolute;
+  width: 100%;
+}
+body footer p {
+  margin: 0;
 }
 body .header {
   width: 50%;
   margin: auto;
   border-radius: 25px;
-  background-color: grey;
+  background-color: #D5E8D4;
 }
 body .header h1 {
   padding: 5px;
@@ -51,34 +82,113 @@ body .header h1 {
 body .gallery {
   display: flex;
   flex-wrap: wrap;
-  margin: auto;
-  width: 75%;
   justify-content: center;
-  background-color: grey;
+  background-color: #D5E8D4;
   border-radius: 25px;
-  padding: 10px 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 90%;
+  margin: auto;
 }
 body .column {
-  flex: 20%;
+  flex: 1 1 20%;
   max-width: 20%;
-  padding: 0px 5px;
+  box-sizing: border-box;
+  padding: 0 5px;
+  text-align: center;
 }
-body .column img {
-  width: 100%;
+body .column .image-container {
+  position: relative;
+  width: 100%; /* Ensure full width of the column */
+  padding-bottom: 10px; /* Space below the image */
+  overflow: hidden; /* Ensure content stays within boundaries */
+}
+body .column .image-container img {
+  width: 100%; /* Ensure the image fits within the container */
+  height: auto;
+  display: block;
   border-radius: 25px;
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+body .column .image-container .overlay-text {
+  position: absolute;
+  bottom: 10px;
+  left: 0; /* Align text to the left */
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: #fff; /* White text color */
+  width: 100%; /* Ensure full width of the container */
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box; /* Include padding in width calculation */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 0 0 25px 25px; /* Match image's border radius */
+}
+body .column .image-container:hover .overlay-text {
+  opacity: 1; /* Show text on hover */
 }
 @media screen and (max-width: 900px) {
   body .column {
-    flex: 40%;
+    flex: 1 1 40%; /* Adjust for medium screens */
     max-width: 40%;
   }
   body .gallery {
-    width: 50%;
+    width: 90%; /* Adjust gallery width */
   }
 }
 @media screen and (max-width: 600px) {
   body .column {
-    flex: 100%;
+    flex: 1 1 100%; /* Adjust for small screens */
     max-width: 100%;
   }
+}
+body .contact-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+body .contact-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+body .contact-form h1 {
+  margin-top: 0;
+  color: #333;
+}
+body .contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+body .contact-form form label {
+  margin: 10px 0 5px;
+  color: #555;
+}
+body .contact-form form input,
+body .contact-form form textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+body .contact-form form button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+body .contact-form form button:hover {
+  background-color: #45a049;
 }/*# sourceMappingURL=styles.css.map */
